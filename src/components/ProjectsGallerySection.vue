@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 import { projects } from '@/data/projects'
 import type { ProjectItem } from '@/data/types'
-import { ExternalLink, CheckCircle2, ChevronLeft, ChevronRight } from '@lucide/vue'
+import { ChevronLeft, ChevronRight, X } from '@lucide/vue'
 
 interface CarouselImage {
   src: string
@@ -13,6 +13,30 @@ interface CarouselImage {
 const project1 = (projects.find(p => p.ordinal === 'First') || projects[0]) as ProjectItem
 const project2 = (projects.find(p => p.ordinal === 'Second') || projects[1] || projects[0]) as ProjectItem
 const project3 = (projects.find(p => p.ordinal === 'Third') || projects[2] || projects[0]) as ProjectItem
+
+const expandedImage = ref<{ src: string; alt: string } | null>(null)
+
+function openImage(src: string, alt: string) {
+  expandedImage.value = { src, alt }
+}
+
+function closeImage() {
+  expandedImage.value = null
+}
+
+function handleKeydown(e: KeyboardEvent) {
+  if (e.key === 'Escape' && expandedImage.value) {
+    closeImage()
+  }
+}
+
+onMounted(() => {
+  window.addEventListener('keydown', handleKeydown)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('keydown', handleKeydown)
+})
 
 function buildSlides(project: ProjectItem, captions: string[]): CarouselImage[] {
   const allUrls = [project.image, ...(project.secondaryImages || [])]
@@ -97,7 +121,14 @@ function goToSlide(carouselIdx: number, slideIdx: number) {
         </div>
 
         <div class="lg:col-span-7 grid grid-cols-2 gap-3 sm:gap-4">
-          <div class="col-span-2 group relative aspect-16/9 rounded-2xl overflow-hidden bg-white border border-slate-200/80 shadow-xs transition-all duration-300 hover:shadow-md">
+          <div
+            role="button"
+            tabindex="0"
+            @click="openImage(project1.image, project1.title)"
+            @keydown.enter="openImage(project1.image, project1.title)"
+            @keydown.space.prevent="openImage(project1.image, project1.title)"
+            class="col-span-2 group relative aspect-16/9 rounded-2xl overflow-hidden bg-white border border-slate-200/80 shadow-xs transition-all duration-300 hover:shadow-md cursor-pointer focus-visible:ring-2 focus-visible:ring-[#ea56b5]"
+          >
             <img
               :src="project1.image"
               :alt="project1.title"
@@ -106,7 +137,14 @@ function goToSlide(carouselIdx: number, slideIdx: number) {
             />
           </div>
 
-          <div class="group relative aspect-4/3 rounded-2xl overflow-hidden bg-white border border-slate-200/80 shadow-xs transition-all duration-300 hover:shadow-md">
+          <div
+            role="button"
+            tabindex="0"
+            @click="openImage(project1.secondaryImages?.[0] || '/placeholders/project-thumb.svg', 'Concept & Sketching')"
+            @keydown.enter="openImage(project1.secondaryImages?.[0] || '/placeholders/project-thumb.svg', 'Concept & Sketching')"
+            @keydown.space.prevent="openImage(project1.secondaryImages?.[0] || '/placeholders/project-thumb.svg', 'Concept & Sketching')"
+            class="group relative aspect-4/3 rounded-2xl overflow-hidden bg-white border border-slate-200/80 shadow-xs transition-all duration-300 hover:shadow-md cursor-pointer focus-visible:ring-2 focus-visible:ring-[#ea56b5]"
+          >
             <img
               :src="project1.secondaryImages?.[0] || '/placeholders/project-thumb.svg'"
               alt="Concept & Sketching"
@@ -115,7 +153,14 @@ function goToSlide(carouselIdx: number, slideIdx: number) {
             />
           </div>
 
-          <div class="group relative aspect-4/3 rounded-2xl overflow-hidden bg-white border border-slate-200/80 shadow-xs transition-all duration-300 hover:shadow-md">
+          <div
+            role="button"
+            tabindex="0"
+            @click="openImage(project1.secondaryImages?.[1] || '/placeholders/project-thumb.svg', 'Color & Rendering')"
+            @keydown.enter="openImage(project1.secondaryImages?.[1] || '/placeholders/project-thumb.svg', 'Color & Rendering')"
+            @keydown.space.prevent="openImage(project1.secondaryImages?.[1] || '/placeholders/project-thumb.svg', 'Color & Rendering')"
+            class="group relative aspect-4/3 rounded-2xl overflow-hidden bg-white border border-slate-200/80 shadow-xs transition-all duration-300 hover:shadow-md cursor-pointer focus-visible:ring-2 focus-visible:ring-[#ea56b5]"
+          >
             <img
               :src="project1.secondaryImages?.[1] || '/placeholders/project-thumb.svg'"
               alt="Color & Rendering"
@@ -137,7 +182,12 @@ function goToSlide(carouselIdx: number, slideIdx: number) {
           <div
             v-for="(img, sIdx) in getVisibleSlides(item.slides, currentIndexes[cIdx] ?? 0)"
             :key="`${currentIndexes[cIdx]}-${sIdx}`"
-            class="group relative aspect-4/3 rounded-2xl overflow-hidden bg-white border border-slate-200/80 shadow-xs transition-all duration-300 hover:shadow-md"
+            role="button"
+            tabindex="0"
+            @click="openImage(img.src, img.alt)"
+            @keydown.enter="openImage(img.src, img.alt)"
+            @keydown.space.prevent="openImage(img.src, img.alt)"
+            class="group relative aspect-4/3 rounded-2xl overflow-hidden bg-white border border-slate-200/80 shadow-xs transition-all duration-300 hover:shadow-md cursor-pointer focus-visible:ring-2 focus-visible:ring-[#ea56b5]"
           >
             <img
               :src="img.src"
@@ -194,5 +244,40 @@ function goToSlide(carouselIdx: number, slideIdx: number) {
         </div>
       </div>
     </div>
+
+    <Teleport to="body">
+      <Transition
+        enter-active-class="transition duration-200 ease-out"
+        enter-from-class="opacity-0"
+        enter-to-class="opacity-100"
+        leave-active-class="transition duration-150 ease-in"
+        leave-from-class="opacity-100"
+        leave-to-class="opacity-0"
+      >
+        <div
+          v-if="expandedImage"
+          class="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/85 backdrop-blur-xs p-4 sm:p-8 cursor-zoom-out"
+          role="dialog"
+          aria-modal="true"
+          @click="closeImage"
+        >
+          <button
+            type="button"
+            @click.stop="closeImage"
+            class="absolute top-4 right-4 sm:top-6 sm:right-6 z-10 w-10 h-10 rounded-full bg-white/90 hover:bg-white text-slate-900 hover:text-[#ea56b5] border border-slate-200 shadow-lg flex items-center justify-center transition-all duration-200 cursor-pointer hover:scale-105 active:scale-95 focus-visible:ring-2 focus-visible:ring-[#ea56b5]"
+            aria-label="Close expanded picture"
+          >
+            <X class="w-5 h-5" />
+          </button>
+
+          <img
+            :src="expandedImage.src"
+            :alt="expandedImage.alt"
+            class="max-w-full max-h-[88vh] w-auto h-auto object-contain rounded-2xl shadow-2xl cursor-default select-none"
+            @click.stop
+          />
+        </div>
+      </Transition>
+    </Teleport>
   </section>
 </template>
