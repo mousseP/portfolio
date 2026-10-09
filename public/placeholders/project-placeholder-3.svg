@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="450" viewBox="0 0 600 450" fill="none">
+  <rect width="600" height="450" fill="#f8f9fd" />
+  <rect x="16" y="16" width="568" height="418" rx="16" fill="#eaedfa" stroke="#b8c4ea" stroke-width="2" stroke-dasharray="6 6" />
+  <g transform="translate(260, 150)">
+    <rect width="80" height="60" rx="10" fill="#ffffff" stroke="#9aa9d4" stroke-width="2" />
+    <circle cx="28" cy="24" r="7" fill="#5c6e9e" />
+    <path d="M12 50 L32 30 L48 44 L58 36 L68 50 Z" fill="#9aa9d4" />
+  </g>
+  <text x="300" y="260" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="700" fill="#5c6e9e" text-anchor="middle">GALLERY ASSET</text>
+  <text x="300" y="285" font-family="'JetBrains Mono', monospace" font-size="12" fill="#64748b" text-anchor="middle">Insert project artwork or design asset</text>
+</svg>
