@@ -29,10 +29,10 @@ function copyEmail() {
             GET IN TOUCH
           </span>
           <h2 class="text-3xl sm:text-5xl font-serif-editorial font-bold text-white tracking-tight">
-            Have a project or technical inquiry?
+            Want to commission me?
           </h2>
           <p class="text-xs sm:text-sm text-slate-400 max-w-lg leading-relaxed">
-            Reach out directly for software development, campus tools, or systems collaboration.
+            Contact me for more details!!! commission me plzzzzz
           </p>
           <p class="text-xs sm:text-sm text-white leading-relaxed font-sans max-w-sm">
             {{ owner.shortBio }}
@@ -49,16 +49,24 @@ function copyEmail() {
           >
             <Check v-if="copied" class="w-4 h-4 text-emerald-400 transition-transform duration-300 scale-110" />
             <Copy v-else class="w-4 h-4 text-slate-400 transition-transform duration-300" />
-            <span>{{ copied ? 'Email Copied!' : 'insert.email.com' }}</span>
+            <span>{{ copied ? 'Email Copied!' : 'mariekeith.tabil@gmail.com' }}</span>
           </button>
 
+
           <a
-            href="mailto:insert.email.com"
-            class="px-6 py-3 rounded-xl bg-[#5c6e9e] hover:bg-[#4b5b84] text-white text-xs font-bold transition-all duration-300 shadow-md flex items-center justify-center gap-2 hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-white"
+              href="mailto:mariekeith.tabil@gmail.com"
+              class="inline-flex items-center justify-center gap-2
+         px-6 py-3 rounded-xl
+         bg-[#ea56b5] hover:bg-[#d63d9f]
+         text-white text-xs font-bold
+         whitespace-nowrap shrink-0
+         transition-all duration-300 shadow-md
+         focus-visible:ring-2 focus-visible:ring-white"
           >
-            <Mail class="w-4 h-4" />
-            <span>Send Email</span>
+            <Mail class="w-4 h-4 shrink-0" />
+            <span class="whitespace-nowrap">Send Email</span>
           </a>
+
           <div class="md:col-span-4 flex items-center justify-start md:justify-end space-x-4">
             <a
                 v-if="owner.socialLinks[0]"

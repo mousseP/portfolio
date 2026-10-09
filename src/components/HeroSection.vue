@@ -99,23 +99,22 @@ onMounted(() => {
 
       <div class="hero-card-item lg:col-span-4 flex justify-center lg:justify-end">
         <div class="relative w-64 sm:w-72 md:w-80 group">
-          <div class="absolute -top-3 -right-3 sm:-top-4 sm:-right-4 w-full h-full bg-[#eaedfa] rounded-3xl -z-10 transition-transform duration-500 group-hover:translate-x-1.5 group-hover:-translate-y-1.5"></div>
-
-          <div class="w-full bg-white rounded-3xl p-3 border border-slate-200/80 shadow-md overflow-hidden smooth-card">
-            <div class="relative aspect-4/5 rounded-2xl overflow-hidden bg-slate-100">
-              <img 
+          <div class="relative aspect-4/5 rounded-2xl overflow-hidden">
+            <img
                 src="/projects/hey_its_me.png"
-                alt="Profile photo placeholder" 
-                class="w-full h-full object-cover object-top filter contrast-105 group-hover:scale-104 transition-transform duration-700 ease-out"
+                alt="Profile photo"
+                class="absolute inset-0 w-full h-full object-cover object-top
+               transition-all duration-700 ease-in-out
+               group-hover:opacity-0 group-hover:scale-105"
                 loading="eager"
-              />
-              <div class="absolute inset-0 bg-gradient-to-t from-[#14171f]/60 via-transparent to-transparent"></div>
-              <div class="absolute bottom-3 left-3 right-3 text-white">
-                <p class="text-xs font-bold leading-tight drop-shadow-sm">
-                  {{ owner.name + " (" + owner.handle + ")"}}
-                </p>
-              </div>
-            </div>
+            />
+            <img
+                src="/projects/kitphoto.jpg"
+                alt="Hover profile photo"
+                class="absolute inset-0 w-full h-full object-cover object-top
+               opacity-0 transition-all duration-500 ease-in-out
+               group-hover:opacity-100 group-hover:scale-105"
+            />
           </div>
         </div>
       </div>

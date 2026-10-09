@@ -26,7 +26,7 @@ onUnmounted(() => {
   <header class="w-full relative z-40 transition-all duration-300">
     <div class="w-full h-9 sm:h-11 bg-[#ea56b5] flex items-center justify-between px-4 sm:px-8 text-white/90 text-xs font-mono tracking-wider border-b border-[#4f5f8a]">
       <div class="flex items-center space-x-2">
-        <span class="font-medium text-white/95">KIT</span>
+        <span class="font-medium text-white/95">KIT'S PORTFOLIO</span>
       </div>
       <div class="flex items-center space-x-4">
         <a 
@@ -49,7 +49,7 @@ onUnmounted(() => {
           aria-label="LinkedIn Profile"
         >
           <LinkedinIcon class="w-3.5 h-3.5" />
-          <span class="hidden md:inline">LinkedIn</span>
+          <span class="hidden md:inline">Keith Tabil</span>
         </a>
       </div>
     </div>

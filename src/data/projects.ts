@@ -34,8 +34,8 @@ export const projects: ProjectItem[] = [
       'Voluptatum deleniti atque corrupti quos dolores',
       'Similique sunt in culpa qui officia deserunt'
     ],
-    image: '/placeholders/project-placeholder-2.svg',
-    secondaryImages: ['/placeholders/project-placeholder-3.svg', '/placeholders/project-thumb.svg']
+    image: '/projects/edit1.jpg',
+    secondaryImages: ['/projects/edit2.png', '/projects/edit3.png', '/projects/edit4.png', '/projects/edit5.png', '/projects/edit6.jpg']
   },
   {
     id: 'project-three',
@@ -53,6 +53,8 @@ export const projects: ProjectItem[] = [
       'Incidunt ut labore et dolore magnam aliquam'
     ],
     image: '/projects/xilonen.png',
-    secondaryImages: ['/projects/agalea.png', '/projects/april.png', '/projects/envybaby.png', '/projects/feb.png', '/projects/mousse.png']
+    secondaryImages: ['/projects/agalea.png', '/projects/april.png', '/projects/envybaby.png', '/projects/feb.png', '/projects/mousse.png',
+      '/projects/jeams.png', '/projects/xingqiu.png', '/projects/layer.png', '/projects/lilia.jpg', '/projects/MARCH.png',
+      '/projects/nov.png', '/projects/twstoc.jpg']
   },
 ]

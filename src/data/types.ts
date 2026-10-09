@@ -5,28 +5,6 @@ export interface SocialLink {
   label: string
 }
 
-export interface EducationItem {
-  period: string
-  degree: string
-  institution: string
-  field: string
-  highlights?: string
-}
-
-export interface ExperienceItem {
-  period: string
-  role: string
-  organization: string
-  description: string
-  skills: string[]
-}
-
-export interface LanguageItem {
-  language: string
-  level: string
-  percentage: number
-}
-
 export interface SkillItem {
   name: string
   category: 'frontend' | 'backend' | 'systems' | 'tools' | 'software' | 'design' | 'illustration'
@@ -47,11 +25,7 @@ export interface OwnerProfile {
   affiliation: string
   shortBio: string
   fullBio: string
-  quote: string
   socialLinks: SocialLink[]
-  education: EducationItem[]
-  experience: ExperienceItem[]
-  languages: LanguageItem[]
   skills: SkillItem[]
 }
 

@@ -6,74 +6,31 @@ export const owner: OwnerProfile = {
   lastName: 'Tabil',
   nickname: 'Kit',
   handle: 'mousseP',
-  title: 'Computer Engineering Student',
+  title: 'Computer Engineering Student, Designer and Artist',
   heroRole: 'ENGINEER & DESIGNER',
   location: 'Cagayan, Philippines',
   university: 'Cagayan State University',
   affiliation: 'ICpEP.SE (Cagayan State University Chapter)',
   shortBio: 'Computer Engineering student at Cagayan State University Carig Campus',
-  fullBio: "Hi!!! I am a self-taught digital and graphical artist based in the Philippines. I enjoy creating illustrations and graphical designs whenever I can. Also with a growing interest in web  design, I try my best to learn the trends and deliver what my client needs to establish their own website. ",
-  quote: 'Designing software with clear purpose, solid architecture, and attention to typographic craft.',
+  fullBio: "Hi!!! I am a self-taught digital and graphical artist based in the Philippines. I enjoy creating illustrations and graphical designs whenever I can. Currently pursuing a degree in Computer Engineering, I also have a growing interest in web designing, I try my best to learn the trends and deliver what my client needs to establish their own website. ",
   socialLinks: [
     {
       name: 'GitHub',
-      url: 'github',
+      url: 'https://github.com/mousseP',
       icon: 'Github',
-      label: 'github.com/Sodayooo-dev'
+      label: 'github.com/mousseP'
     },
     {
       name: 'LinkedIn',
-      url: 'linkedin',
+      url: 'https://www.linkedin.com/in/keithtabil',
       icon: 'Linkedin',
       label: 'LinkedIn Profile'
     },
     {
       name: 'Email',
-      url: 'email',
+      url: 'mariekeith.tabil@gmail.com',
       icon: 'Mail',
       label: 'email'
-    }
-  ],
-  education: [
-    {
-      period: '2023 to Present',
-      degree: 'BS Computer Engineering',
-      institution: 'Cagayan State University',
-      field: 'Computer Engineering (BSCpE)',
-      highlights: 'Focus on computer systems servicing, network configuration, and hardware-software integration.'
-    }
-  ],
-  experience: [
-    {
-      period: '2023 to Present',
-      role: 'Lorem Ipsum or smth',
-      organization: 'ICpEP.SE CSU Chapter',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-      skills: ['Kotlin', 'Android SDK', 'SQLite', 'Event Ops']
-    },
-    {
-      period: '2024 to Present',
-      role: 'something-something',
-      organization: 'Personal Cloud & Labs',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-      skills: ['Ubuntu', 'Node.js', 'Apache', 'PM2', 'Networking']
-    }
-  ],
-  languages: [
-    {
-      language: 'English',
-      level: 'Professional Working',
-      percentage: 95
-    },
-    {
-      language: 'Tagalog (Filipino)',
-      level: 'Native',
-      percentage: 100
-    },
-    {
-      language: 'Ilocano',
-      level: 'Regional Native',
-      percentage: 100
     }
   ],
   skills: [
@@ -81,37 +38,37 @@ export const owner: OwnerProfile = {
       name: 'CSP',
       category: 'illustration',
       icon: '/projects/csp.png',
-      description: 'Digital illustration, line art, manga, and conceptual character design'
+      description: 'For digital illustration and animation'
     },
     {
       name: 'Ibispaint',
       category: 'illustration',
       icon: '/projects/ibispaint.png',
-      description: 'Mobile and tablet digital painting, brush customization, and sketching'
+      description: 'For mobile digital illustration and photo editing'
     },
     {
       name: 'Canva',
       category: 'design',
       icon: '/projects/canva.png',
-      description: 'Marketing layouts, social media graphics, posters, and presentation decks'
+      description: 'For layouts, graphics, and publication materials'
     },
     {
       name: 'Figma',
       category: 'design',
       icon: '/projects/figma.png',
-      description: 'UI/UX design, interactive wireframing, component design systems, and prototypes'
+      description: 'For UI/UX design'
     },
     {
       name: 'Photopea',
       category: 'tools',
       icon: '/projects/photopea.png',
-      description: 'Advanced raster graphics editing, PSD layer manipulation, and photo composition'
+      description: 'For graphics and photo editing'
     },
     {
       name: 'PicsArt',
       category: 'tools',
       icon: '/projects/picsart.png',
-      description: 'Creative photo editing, collage styling, graphic effects, and mobile typography'
+      description: 'For photo editing, collage styling, and graphics'
     }
   ]
 }
