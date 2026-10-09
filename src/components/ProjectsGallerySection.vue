@@ -94,10 +94,6 @@ function goToSlide(carouselIdx: number, slideIdx: number) {
           <h4 class="text-lg sm:text-xl font-serif-editorial font-bold text-slate-900">
             {{ project1.title }}
           </h4>
-
-          <p class="text-xs font-mono font-semibold text-[#ea56b5]">
-            {{ project1.tagline }}
-          </p>
         </div>
 
         <div class="lg:col-span-7 grid grid-cols-2 gap-3 sm:gap-4">

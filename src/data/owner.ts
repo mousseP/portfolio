@@ -12,7 +12,7 @@ export const owner: OwnerProfile = {
   university: 'Cagayan State University',
   affiliation: 'ICpEP.SE (Cagayan State University Chapter)',
   shortBio: 'Computer Engineering student at Cagayan State University Carig Campus',
-  fullBio: "Hi, I'm Keith Tabil (mousseP), a self-taught digital and graphical artist based in the Philippines. I enjoy creating illustrations and graphical designs whenever I can. Also with a growing interest in web  design, I try my best to learn the trends and deliver what my client needs to establish their own website. ",
+  fullBio: "Hi!!! I am a self-taught digital and graphical artist based in the Philippines. I enjoy creating illustrations and graphical designs whenever I can. Also with a growing interest in web  design, I try my best to learn the trends and deliver what my client needs to establish their own website. ",
   quote: 'Designing software with clear purpose, solid architecture, and attention to typographic craft.',
   socialLinks: [
     {

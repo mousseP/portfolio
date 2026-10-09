@@ -3,7 +3,7 @@ import type { ProjectItem } from './types'
 export const projects: ProjectItem[] = [
   {
     id: 'project-one',
-    title: 'Digital Illustration & Character Art',
+    title: 'Web UI/UX & Interactive Design',
     ordinal: 'First',
     tagline: 'Character Concept Art, Linework & Digital Painting',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
@@ -16,8 +16,8 @@ export const projects: ProjectItem[] = [
       'Incididunt ut labore et dolore magna',
       'Excepteur sint occaecat cupidatat non proident'
     ],
-    image: '/projects/canva.png',
-    secondaryImages: ['/placeholders/project-thumb.svg', '/placeholders/project-thumb.svg']
+    image: '/projects/tattaovet.png',
+    secondaryImages: ['/projects/Recruits.png', '/projects/askaudrey.png']
   },
   {
     id: 'project-two',
@@ -39,7 +39,7 @@ export const projects: ProjectItem[] = [
   },
   {
     id: 'project-three',
-    title: 'Web UI/UX & Interactive Design',
+    title: 'Digital Illustration & Character Art',
     ordinal: 'Third',
     tagline: 'Modern Web Interfaces, Wireframes & Visual Prototypes',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
@@ -52,7 +52,7 @@ export const projects: ProjectItem[] = [
       'Sed quia non numquam eius modi tempora',
       'Incidunt ut labore et dolore magnam aliquam'
     ],
-    image: '/placeholders/project-placeholder-3.svg',
-    secondaryImages: ['/placeholders/project-placeholder-4.svg', '/placeholders/project-thumb.svg']
+    image: '/projects/xilonen.png',
+    secondaryImages: ['/projects/agalea.png', '/projects/april.png', '/projects/envybaby.png', '/projects/feb.png', '/projects/mousse.png']
   },
 ]
