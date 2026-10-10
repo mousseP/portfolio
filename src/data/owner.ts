@@ -7,12 +7,12 @@ export const owner: OwnerProfile = {
   nickname: 'Kit',
   handle: 'mousseP',
   title: 'Computer Engineering Student, Designer and Artist',
-  heroRole: 'ENGINEER & DESIGNER',
   location: 'Cagayan, Philippines',
-  university: 'Cagayan State University',
-  affiliation: 'ICpEP.SE (Cagayan State University Chapter)',
   shortBio: 'Computer Engineering student at Cagayan State University Carig Campus',
-  fullBio: "Hi!!! I am a self-taught digital and graphical artist based in the Philippines. I enjoy creating illustrations and graphical designs whenever I can. Currently pursuing a degree in Computer Engineering, I also have a growing interest in web designing, I try my best to learn the trends and deliver what my client needs to establish their own website. ",
+  fullBio: "Hi!!! I am a self-taught digital and graphical artist based in the Philippines. " +
+      "I have a passion for arts, traditional, digital and crafts as well graphics and designing. " +
+      "Currently pursuing a degree in Computer Engineering, I also have a growing interest in web designing." +
+      "I try my best to learn the trends and deliver what my client needs to establish their own website. ",
   socialLinks: [
     {
       name: 'GitHub',

@@ -51,7 +51,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="min-h-screen bg-white text-slate-900 flex flex-col justify-between selection:bg-[#5c6e9e] selection:text-white relative overflow-x-clip font-sans antialiased">
+  <div class="min-h-screen bg-[#eeeeee] text-slate-900 flex flex-col justify-between selection:bg-[#5c6e9e] selection:text-white relative overflow-x-clip font-sans antialiased">
     <NavigationHeader />
 
     <main id="main-content" class="flex-1">
