@@ -37,37 +37,37 @@ export const owner: OwnerProfile = {
     {
       name: 'CSP',
       category: 'illustration',
-      icon: '/projects/csp.png',
+      icon: 'public/projects/csp.png',
       description: 'For digital illustration and animation'
     },
     {
       name: 'Ibispaint',
       category: 'illustration',
-      icon: '/projects/ibispaint.png',
+      icon: 'public/projects/ibispaint.png',
       description: 'For mobile digital illustration and photo editing'
     },
     {
       name: 'Canva',
       category: 'design',
-      icon: '/projects/canva.png',
+      icon: 'public/projects/canva.png',
       description: 'For layouts, graphics, and publication materials'
     },
     {
       name: 'Figma',
       category: 'design',
-      icon: '/projects/figma.png',
+      icon: 'public/projects/figma.png',
       description: 'For UI/UX design'
     },
     {
       name: 'Photopea',
       category: 'tools',
-      icon: '/projects/photopea.png',
+      icon: 'public/projects/photopea.png',
       description: 'For graphics and photo editing'
     },
     {
       name: 'PicsArt',
       category: 'tools',
-      icon: '/projects/picsart.png',
+      icon: 'public/projects/picsart.png',
       description: 'For photo editing, collage styling, and graphics'
     }
   ]

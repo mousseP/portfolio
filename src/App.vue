@@ -51,7 +51,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="min-h-screen bg-[#eeeeee] text-slate-900 flex flex-col justify-between selection:bg-[#5c6e9e] selection:text-white relative overflow-x-clip font-sans antialiased">
+  <div class="bg-dots min-h-screen text-slate-900 flex flex-col justify-between selection:bg-[#5c6e9e] selection:text-white relative overflow-x-clip font-sans antialiased">
     <NavigationHeader />
 
     <main id="main-content" class="flex-1">
@@ -67,3 +67,11 @@ onUnmounted(() => {
     <FooterSection />
   </div>
 </template>
+
+<style scoped>
+.bg-dots {
+  background-color: #EAE8E3;
+  background-image: radial-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+  background-size: 12px 12px; /* Increased from 4px to 12px */
+}
+</style>

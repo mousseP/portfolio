@@ -5,23 +5,23 @@ export const projects: ProjectItem[] = [
     id: 'project-one',
     title: 'Web UI/UX & Interactive Design',
     ordinal: 'First',
-    image: '/projects/tattaovet.png',
-    secondaryImages: ['/projects/Recruits.png', '/projects/askaudrey.png']
+    image: 'public/projects/tattaovet.png',
+    secondaryImages: ['public/projects/Recruits.png', 'public/projects/askaudrey.png']
   },
   {
     id: 'project-two',
     title: 'Graphic Design & Visual Identity',
     ordinal: 'Second',
-    image: '/projects/edit1.jpg',
-    secondaryImages: ['/projects/edit2.png', '/projects/edit3.png', '/projects/edit4.png', '/projects/edit5.png', '/projects/edit6.jpg']
+    image: 'public/projects/edit1.jpg',
+    secondaryImages: ['public/projects/edit2.png', 'public/projects/edit3.png', 'public/projects/edit4.png', 'public/projects/edit5.png', 'public/projects/edit6.jpg']
   },
   {
     id: 'project-three',
     title: 'Digital Illustration & Character Art',
     ordinal: 'Third',
-    image: '/projects/xilonen.png',
-    secondaryImages: ['/projects/agalea.png', '/projects/april.png', '/projects/envybaby.png', '/projects/feb.png', '/projects/mousse.png',
-      '/projects/jeams.png', '/projects/xingqiu.png', '/projects/layer.png', '/projects/lilia.jpg', '/projects/MARCH.png',
-      '/projects/nov.png', '/projects/twstoc.jpg']
+    image: 'public/projects/xilonen.png',
+    secondaryImages: ['public/projects/agalea.png', 'public/projects/april.png', 'public/projects/envybaby.png', 'public/projects/feb.png',
+      'public/projects/xingqiu.png', 'public/projects/lilia.jpg', 'public/projects/MARCH.png',
+      'public/projects/nov.png', 'public/projects/twstoc.jpg']
   },
 ]
