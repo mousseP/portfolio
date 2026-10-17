@@ -1,5 +1,7 @@
 import type { OwnerProfile } from './types'
 
+const base = import.meta.env.BASE_URL
+
 export const owner: OwnerProfile = {
   name: 'Keith Tabil',
   firstName: 'Keith',
@@ -37,37 +39,37 @@ export const owner: OwnerProfile = {
     {
       name: 'CSP',
       category: 'illustration',
-      icon: 'public/projects/csp.png',
+      icon: `${base}projects/csp.png`,
       description: 'For digital illustration and animation'
     },
     {
       name: 'Ibispaint',
       category: 'illustration',
-      icon: 'public/projects/ibispaint.png',
+      icon: `${base}projects/ibispaint.png`,
       description: 'For mobile digital illustration and photo editing'
     },
     {
       name: 'Canva',
       category: 'design',
-      icon: 'public/projects/canva.png',
+      icon: `${base}projects/canva.png`,
       description: 'For layouts, graphics, and publication materials'
     },
     {
       name: 'Figma',
       category: 'design',
-      icon: 'public/projects/figma.png',
+      icon: `${base}projects/figma.png`,
       description: 'For UI/UX design'
     },
     {
       name: 'Photopea',
       category: 'tools',
-      icon: 'public/projects/photopea.png',
+      icon: `${base}projects/photopea.png`,
       description: 'For graphics and photo editing'
     },
     {
       name: 'PicsArt',
       category: 'tools',
-      icon: 'public/projects/picsart.png',
+      icon: `${base}projects/picsart.png`,
       description: 'For photo editing, collage styling, and graphics'
     }
   ]
