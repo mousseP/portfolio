@@ -40,3 +40,30 @@ npm run dev
 ```sh
 npm run build
 ```
+
+### Preview the Production Build
+
+```sh
+npm run build
+npm run preview
+```
+
+Files in `public/projects/` are served as `projects/...`, without `public/`
+in the URL. In TypeScript, prefix these paths with `import.meta.env.BASE_URL`
+so they also work when GitHub Pages hosts the site under a repository path.
+Keep filename capitalization exact, including `Recruits.png` and `MARCH.png`.
+
+### Deploy
+
+For Vercel, use `npm run build` as the build command and `dist` as the output
+directory. Deploy the latest commit containing the corrected image paths.
+
+For GitHub Pages, run:
+
+```sh
+npm run deploy
+```
+
+The `predeploy` script builds the current source before publishing `dist`.
+The relative `base: './'` in `vite.config.ts` supports both Vercel and
+GitHub Pages repository URLs.
